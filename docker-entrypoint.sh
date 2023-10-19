@@ -281,10 +281,10 @@ EOPHP
 	done
 fi
 
-if [ -e /var/www/html/wp/index.php ] && [ -e /var/www/html/wp/.htaccess ] && [ ! -e /var/www/html/index.php ] && [ ! -e /var/www/html/.htaccess ]; then
-  sed -i -e 's/\/wp-blog-header\.php/\/wp\/wp-blog-header.php/g' /var/www/html/wp/index.php
-  mv /var/www/html/wp/.htaccess /var/www/html/.htaccess
-  mv /var/www/html/wp/index.php /var/www/html/index.php
+if [ -e /var/www/html/wordpress/index.php ] && [ -e /var/www/html/wordpress/.htaccess ] && [ ! -e /var/www/html/index.php ] && [ ! -e /var/www/html/.htaccess ]; then
+  sed -i -e 's/\/wp-blog-header\.php/\/wp\/wp-blog-header.php/g' /var/www/html/wordpress/index.php
+  mv /var/www/html/wordpress/.htaccess /var/www/html/.htaccess
+  mv /var/www/html/wordpress/index.php /var/www/html/index.php
 fi
 
 exec "$@"
